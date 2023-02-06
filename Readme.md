@@ -1,6 +1,8 @@
 # Chapter - 1
 * Vue 3 Absolute Basics
+* Attribute Binding and Event Handling
 * Lists, Conditionals, and Computed Properties
+* Bring it All Together
 
 ## Some Pictures
 ![image 1](DemoImages/image1.png?raw=true)
