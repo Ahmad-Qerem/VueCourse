@@ -1,0 +1,5 @@
+{
+    "vetur.format.scriptInitialIndent": true,
+    "vetur.languageFeatures.updateImportOnFileMove": false,
+    "vetur.languageFeatures.semanticTokens": false
+}
