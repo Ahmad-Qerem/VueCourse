@@ -2,7 +2,7 @@
 * Custom Vue Component
 * One Vue Component Per File
 * Component Props
-* coming soon...
+* Done In Chapter 1
 ## Some Pictures
 ![image 1](DemoImages/img1.png?raw=true "default type")
 ![image 2](DemoImages/img2.png?raw=true "secondary type")
