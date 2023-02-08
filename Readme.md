@@ -3,4 +3,4 @@
 * Parent-Child State Communication
 
 
-![Vid 1](DemoImages/Vid1.mp4)
+![Vid 1](DemoImages/ezgif.com-optimize.gif)
