@@ -1,10 +1,11 @@
-import AssignmentList from './AssignmentList.js';
-    
+import AssignmentList from "./AssignmentList.js";
+import AddAssignment from "./AddAssignment.js";
 export default {
-  components: {AssignmentList},
+  components: { AssignmentList, AddAssignment },
   template: `
-        <AssignmentList :assignments="IsNotCompleted" title="TODO"></AssignmentList>
-        <AssignmentList :assignments="IsCompleted" title="DONE"></AssignmentList>
+        <AssignmentList :assignments="filters.NotCompleted" title="TODO"></AssignmentList>
+        <AssignmentList :assignments="filters.Completed" title="DONE"></AssignmentList>
+        <AddAssignment @add="HandelSubmit"></AddAssignment>
     `,
   data() {
     return {
@@ -25,14 +26,24 @@ export default {
           id: 3,
         },
       ],
+      newAssignment: "",
     };
   },
   computed: {
-    IsCompleted() {
-      return this.assignments.filter((a) => a.complete);
+    filters() {
+      return {
+        Completed: this.assignments.filter((a) => a.complete),
+        NotCompleted: this.assignments.filter((a) => !a.complete),
+      };
     },
-    IsNotCompleted() {
-      return this.assignments.filter((a) => !a.complete);
+  },
+  methods: {
+    HandelSubmit(assignment) {
+      this.assignments.push({
+        name: assignment,
+        completed: false,
+        id: this.assignments.length + 1,
+      });
     },
   },
 };

@@ -1,7 +1,7 @@
 export default {
   template: `
         
-            <li>
+            <li id="ListItem">
                 <label>
                     {{assignment.name}}
                     <input type="checkbox" v-model="assignment.complete">
