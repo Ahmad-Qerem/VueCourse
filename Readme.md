@@ -1,9 +1,6 @@
-# Chapter - 1
-* Vue 3 Absolute Basics
-* Lists, Conditionals, and Computed Properties
+# Chapter - 3
+* Handle a Form Submission
+* Parent-Child State Communication
 
-## Some Pictures
-![image 1](DemoImages/image1.png?raw=true)
-![image 2](DemoImages/image2.png?raw=true)
-![image 3](DemoImages/image3.png?raw=true)
-![image 4](DemoImages/image4.png?raw=true)
+
+![Vid 1](DemoImages/Vid1.mp4)
