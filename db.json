@@ -1,0 +1,28 @@
+{
+  "assignments": [
+    {
+      "name": "Finish project",
+      "complete": false,
+      "tag": "tech",
+      "id": 1
+    },
+    {
+      "name": "Read chapter",
+      "complete": false,
+      "tag": "math",
+      "id": 2
+    },
+    {
+      "name": "Turn in homework",
+      "complete": false,
+      "tag": "english",
+      "id": 3
+    },
+    {
+      "name": "Finish 20 lectures today",
+      "complete": true,
+      "tag": "tech",
+      "id": 4
+    }
+  ]
+}

@@ -3,29 +3,17 @@ import AddAssignment from "./AddAssignment.js";
 export default {
   components: { AssignmentList, AddAssignment },
   template: `
-        <AssignmentList :assignments="filters.NotCompleted" title="TODO"></AssignmentList>
-        <AssignmentList :assignments="filters.Completed" title="DONE"></AssignmentList>
-        <AddAssignment @add="HandelSubmit"></AddAssignment>
+
+        <div class="Lists">
+          <AssignmentList  :assignments="filters.NotCompleted" title="TODO">
+            <AddAssignment @add="HandelSubmit" ></AddAssignment>
+          </AssignmentList>          
+          <AssignmentList :assignments="filters.Completed" title="DONE" canClose></AssignmentList>
+        </div>
     `,
   data() {
     return {
-      assignments: [
-        {
-          name: "Finish project",
-          complete: false,
-          id: 1,
-        },
-        {
-          name: "Read chapter",
-          complete: false,
-          id: 2,
-        },
-        {
-          name: "Turn in homework",
-          complete: false,
-          id: 3,
-        },
-      ],
+      assignments: [],
       newAssignment: "",
     };
   },
@@ -36,6 +24,12 @@ export default {
         NotCompleted: this.assignments.filter((a) => !a.complete),
       };
     },
+  },
+  created() {
+    //fake API localy from json-server library
+    fetch("http://localhost:3000/assignments")
+      .then((Response) => Response.json())
+      .then((data) => (this.assignments = data));
   },
   methods: {
     HandelSubmit(assignment) {
