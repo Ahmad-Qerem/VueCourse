@@ -1,21 +1,25 @@
 <script setup>
-import TheWelcome from "../components/TheWelcome.vue";
+import {useFlash} from "../composables/useFlash";
+
+let {flash} = useFlash();
+
 </script>
 
 <template>
   <main>
-    <div>
-      This Is Home Page
-    </div>
+    <!-- to active passing function from vite.config -- add opject in vue({...}) reactivityTransform set to true-->
+    <h1> Home Page </h1>
+    <button @click="flash('Test There')">Click Me</button>
   </main>
 </template>
 
 <style scoped>
-  main{
-    border: 1px solid black;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+main {
+  border: 1px solid black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 </style>
