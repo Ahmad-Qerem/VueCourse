@@ -1,35 +1,9 @@
-# Vue-test
+# Chapter - 6
+* Two Mental Leaps to Script Setup
+* From Mixins to Composables
+* Composable Example: Local Storage
+* Refactor to defineProps and defineEmits
 
-This template should help get you started developing with Vue 3 in Vite.
+using composition API from Vue.js i had created new small website that use local storage and mixins , composables . 
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+![](./Demo/mygif.gif)
