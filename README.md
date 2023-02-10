@@ -1,9 +1,9 @@
-# Chapter - 6
-* Two Mental Leaps to Script Setup
-* From Mixins to Composables
-* Composable Example: Local Storage
-* Refactor to defineProps and defineEmits
+# Chapter - 7
+* Dependency Injection With Provide and Inject
+* Store State in an External File
+* Direct Mutation Concerns
+* Say Hello to Pinia
 
-using composition API from Vue.js i had created new small website that use local storage and mixins , composables . 
+
 
 ![](./Demo/mygif.gif)

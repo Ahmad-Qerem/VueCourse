@@ -1,15 +1,18 @@
 <script setup>
 import { useStorage } from "../composables/useStorage";
-import TababaleTextArea from "../components/TababaleTextArea.vue"
+import TababaleTextArea from "../components/TababaleTextArea.vue";
+import { useCounterStore } from "../stores/conterStoreUsingPinia";
 let FirstName = useStorage("First Name", "Youer First Name ");
 let LastName = useStorage("Last Name", "Youer Last Name");
 let Age = useStorage("Age", "youer Age");
 let Address = useStorage("Address", "Youer Address");
+
+let counter = useCounterStore();
 </script>
 
 <template>
   <form class="MainWraper">
-    <h2>Contact Info</h2>
+    <h2>Contact Info {{ counter.count }}</h2>
     <div class="inputs">
       <label class="OneInput">
         First Name : <input type="text" v-model="FirstName"
@@ -23,7 +26,10 @@ let Address = useStorage("Address", "Youer Address");
       /></label>
       <TababaleTextArea />
     </div>
-    <button class="btn" type="submit">Send</button>
+    <button class="btn" @click.prevent="counter.dumyFunction" type="submit">
+      Send
+    </button>
+    <button @click.prevent="counter.increment">Add</button>
   </form>
 </template>
 
@@ -44,17 +50,15 @@ let Address = useStorage("Address", "Youer Address");
   justify-content: space-between;
 }
 form {
-
   display: flex;
   flex-direction: column;
 }
-.textArea{
+.textArea {
   width: 300px;
   height: 100px;
   resize: none;
-  
 }
-.btn{
+.btn {
   margin: 5px;
   padding: 5px 10px;
   background-color: black;
@@ -62,7 +66,7 @@ form {
   cursor: pointer;
   box-shadow: 5px 10px 10px gray;
 }
-.btn:hover{
-background-color: rgba(0, 0, 0, 0.7);
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 </style>

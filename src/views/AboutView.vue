@@ -1,16 +1,15 @@
-<script>
-  import flash from "../mixins/flash.js";
+<script setup>
+import { useCounterStore } from "../stores/conterStoreUsingPinia";
+import { state } from "../stores/counterStore";
 
-  export default {
-    mixins:[flash],
-  };
+let counter = useCounterStore();
 </script>
 
 <template>
-  <div class="about">
-    <h1>About Page</h1>
-    <button @click="flash('Hello')">Click Me</button>
-  </div>
+  <h1>Use Store</h1>
+  <h2>Home Counter is {{ state.counter }}</h2>
+  <h2>Contact Counter Using Pinia is : {{ counter.count }}</h2>
+  <button @click="state.increment">Update</button>
 </template>
 
 <style>
